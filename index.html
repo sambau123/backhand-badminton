@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#15347e" />
+  <meta name="description" content="Backhand Master Ultimate – laman pembelajaran interaktif servis backhand badminton Tahun 6 dengan foto sebenar, audio, video, GIF, enam misi, bonus, bintang dan kemajuan." />
+  <title>Backhand Master Ultimate</title>
+  <style>
+    :root{
+      --navy:#10234f;--blue:#1e56d8;--blue2:#4da2ff;--sky:#f4f8ff;--card:#ffffff;--gold:#ffd54f;--yellow:#ffeb8a;--green:#6bd39d;--red:#ff6f6f;--ink:#17305f;--muted:#60749d;--line:#dce7ff;--purple:#7b61ff;--shadow:0 18px 45px rgba(20,55,125,.12);--radius:26px;--max:1280px;
+      --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom,0px);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,#eef5ff 0%,#f9fbff 42%,#eef5ff 100%);color:var(--ink)}
+    img,video{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer;border:0}
+    :focus-visible{outline:3px solid #ffc83d;outline-offset:2px}
+    .container{width:min(calc(100% - 28px),var(--max));margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(18,35,79,.08);padding-top:var(--safe-top)}
+    .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-badge{width:50px;height:50px;border-radius:18px;background:linear-gradient(140deg,#1043b7,#36a2ff);display:grid;place-items:center;font-size:24px;box-shadow:0 10px 24px rgba(18,75,195,.25)}
+    .brand h1{font-size:1.05rem;line-height:1.1;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:.78rem}
+    .header-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .mini-progress{min-width:min(320px,78vw);background:#edf3ff;padding:10px 14px;border-radius:18px;border:1px solid #dbe7ff}
+    .mini-progress-top{display:flex;justify-content:space-between;gap:10px;font-size:.85rem;font-weight:800;color:var(--ink)}
+    .progress-track{height:12px;background:#d6e3ff;border-radius:999px;overflow:hidden;margin-top:8px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#7b61ff,#1e56d8,#3fc1ff);border-radius:999px;transition:width .35s ease}
+    .nav-wrap{border-bottom:1px solid rgba(18,35,79,.06);background:rgba(255,255,255,.76)}
+    .nav{display:flex;gap:10px;overflow:auto;padding:12px 0}.nav::-webkit-scrollbar{display:none}
+    .nav a{white-space:nowrap;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid #d8e4ff;box-shadow:0 4px 12px rgba(15,37,87,.05);font-weight:800;font-size:.92rem;color:#37558f}
+    .nav a:hover{background:#edf4ff;color:#0f48bf}
+    .hero{padding:34px 0 20px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
+    .hero-card{background:linear-gradient(135deg,#133caa 0%,#2670f2 57%,#5cbfff 100%);color:#fff;border-radius:36px;padding:clamp(22px,4vw,46px);box-shadow:var(--shadow);position:relative;overflow:hidden;min-height:420px}
+    .hero-card:before,.hero-card:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.13)}
+    .hero-card:before{width:220px;height:220px;right:-50px;top:-60px}.hero-card:after{width:170px;height:170px;left:-40px;bottom:-50px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);font-weight:800;font-size:.85rem;letter-spacing:.02em}
+    .hero h2{font-size:clamp(2.3rem,5vw,4.25rem);line-height:.98;letter-spacing:-.045em;margin:16px 0 14px;max-width:12ch}.hero h2 span{color:#ffe15c}
+    .hero p{font-size:1.07rem;max-width:60ch;color:rgba(255,255,255,.94)}
+    .hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.stat-pill{padding:11px 16px;background:rgba(255,255,255,.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);border-radius:999px;font-weight:800}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:16px;font-weight:900;box-shadow:0 8px 18px rgba(11,31,77,.13);transition:.2s transform,.2s background}.btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:#fff;color:#1141a6}.btn-secondary{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.22)}
+    .hero-side{display:grid;gap:18px}
+    .summary-card,.stars-card{background:var(--card);border-radius:30px;padding:22px;box-shadow:var(--shadow);border:1px solid var(--line)}
+    .summary-card h3,.stars-card h3,.section-title h3{margin:0 0 8px;font-size:1.35rem}.summary-list{display:grid;gap:12px;margin-top:14px}.summary-item{display:flex;gap:12px;align-items:flex-start;background:#f7faff;padding:12px 14px;border-radius:18px;border:1px solid #e0ebff}.summary-icon{flex:0 0 42px;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#eaf2ff,#dce8ff);font-size:1.18rem}
+    .star-total{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.star-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.star{width:44px;height:44px;border-radius:16px;background:#edf3ff;border:1px solid #d5e2ff;display:grid;place-items:center;font-size:1.2rem;transition:.2s}.star.active{background:linear-gradient(135deg,#ffe27d,#ffc72b);border-color:#ffda65;box-shadow:0 10px 18px rgba(255,195,51,.23)}
+    .section{padding:22px 0 10px}.section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;flex-wrap:wrap;margin-bottom:18px}.section-title small{display:block;font-weight:900;color:#3670d2;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.section-title p{margin:0;color:var(--muted);max-width:760px}
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:var(--shadow)}
+    .info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.info-tile{background:linear-gradient(180deg,#f9fbff,#eef5ff);border:1px solid #dce8ff;border-radius:22px;padding:16px}
+    .banner-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .banner{position:relative;overflow:hidden;min-height:180px;border-radius:28px;padding:24px;background:linear-gradient(140deg,#10388e,#2670f2 52%,#59d2ff);color:#fff;box-shadow:var(--shadow)}
+    .banner.yellow{background:linear-gradient(140deg,#ef9628,#ffcf57 50%,#ffe98d)}
+    .banner.green{background:linear-gradient(140deg,#0c8d7a,#4ddab0 55%,#7ee9cf)}
+    .banner.purple{background:linear-gradient(140deg,#5a43d6,#8b6df8 52%,#b796ff)}
+    .banner.red{background:linear-gradient(140deg,#da4b4b,#ff7a5b 52%,#ffbe86)}
+    .banner.cyan{background:linear-gradient(140deg,#0f6f92,#2e91d1 50%,#78d4f3)}
+    .banner:before,.banner:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.18)}
+    .banner:before{width:120px;height:120px;right:-10px;top:-20px}.banner:after{width:90px;height:90px;left:-20px;bottom:-20px}
+    .banner small{font-weight:900;opacity:.92;letter-spacing:.08em;text-transform:uppercase}
+    .banner h4{font-size:clamp(1.7rem,4vw,2.5rem);line-height:.9;margin:8px 0 0;letter-spacing:-.04em;text-shadow:0 4px 0 rgba(12,34,79,.17),0 10px 18px rgba(9,28,61,.18)}
+    .banner p{margin:10px 0 0;max-width:25ch;font-weight:700;color:rgba(255,255,255,.94)}
+    .badge-3d{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);font-weight:900}
+    .biodata{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px}.creator-card{background:linear-gradient(180deg,#fafdff,#eef5ff)}
+    .avatar{width:84px;height:84px;border-radius:26px;background:linear-gradient(140deg,#1043b7,#38b2ff);display:grid;place-items:center;font-size:2rem;color:#fff;box-shadow:0 12px 24px rgba(17,67,183,.22);margin-bottom:14px}
+    .kpi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.kpi{padding:14px;border-radius:18px;background:#fff;border:1px solid #dce8ff}
+    .pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.soft-pill{padding:9px 13px;border-radius:999px;background:#edf4ff;border:1px solid #dce8ff;font-weight:800;color:#2a59b1}
+    .dskp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.dskp-box{padding:18px;border-radius:22px;background:linear-gradient(180deg,#f9fbff,#f1f6ff);border:1px solid #dbe6ff}.dskp-box h4{margin:0 0 8px;font-size:1.1rem}
+    .media-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}.video-wrap{border-radius:24px;overflow:hidden;border:1px solid #d8e6ff;background:#091c3d;box-shadow:var(--shadow)}
+    .video-wrap video{width:100%;aspect-ratio:16/9;background:#081225}
+    .gif-card img{width:100%;border-radius:20px;border:1px solid #d9e5ff}.media-points{display:grid;gap:12px;margin-top:16px}.media-point{padding:14px 16px;background:#f7faff;border:1px solid #dfebff;border-radius:18px}
+    .tech-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.tech-card{background:#fff;border:1px solid #dce6ff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.tech-img{aspect-ratio:4/5;object-fit:cover;width:100%;background:#dde9ff}.tech-body{padding:18px}.step-num{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:15px;background:linear-gradient(140deg,#ffd84f,#ffba2d);font-weight:900;color:#17305f;box-shadow:0 8px 18px rgba(255,193,29,.22)}
+    .tech-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}.tech-card h4{margin:0;font-size:1.22rem}.tech-card p{margin:0;color:var(--muted)}
+    audio{width:100%;margin-top:14px}
+    .mission-list{display:grid;gap:18px}
+    .mission{background:#fff;border:1px solid #dce7ff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+    .mission-head{padding:20px 22px;background:linear-gradient(180deg,#f7faff,#eef4ff);display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+    .mission-title{display:flex;gap:12px;align-items:flex-start}.mission-number{flex:0 0 54px;width:54px;height:54px;border-radius:18px;background:linear-gradient(140deg,#1643b8,#37a0ff);color:#fff;display:grid;place-items:center;font-weight:900;font-size:1.12rem;box-shadow:0 10px 20px rgba(23,71,184,.18)}
+    .mission-head h4{margin:0;font-size:1.28rem}.mission-head p{margin:6px 0 0;color:var(--muted)}
+    .mission-status{display:flex;align-items:center;gap:10px}.status-badge{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid #d9e6ff;font-weight:900;color:#4c628f}.status-badge.done{background:#eafaf2;border-color:#bee9d0;color:#16845a}.mission-body{padding:22px}.mission-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .action-btn{padding:12px 16px;border-radius:15px;background:#1852d2;color:#fff;font-weight:900}.action-btn.alt{background:#edf4ff;color:#1d4faf;border:1px solid #d8e5ff}.action-btn.success{background:linear-gradient(135deg,#53c982,#289e5b)}
+    .flash-grid,.match-grid,.tf-grid{display:grid;gap:14px}.flash-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .flash-card{padding:16px;border-radius:20px;background:#f8fbff;border:1px solid #dce8ff;cursor:pointer;transition:.2s transform,.2s box-shadow}.flash-card:hover{transform:translateY(-1px)}.flash-card.open{background:#e9f3ff;box-shadow:0 10px 20px rgba(25,78,196,.08)}
+    .flash-card h5{margin:0 0 6px;font-size:1.02rem}.flash-card p{margin:8px 0 0;color:var(--muted);display:none}.flash-card.open p{display:block}
+    .tf-item,.match-item,.sort-item,.quiz-item,.target-box,.bonus-box{padding:16px;border-radius:20px;background:#f9fbff;border:1px solid #dce8ff}
+    .tf-item strong,.match-item strong{display:block;margin-bottom:10px}
+    .tf-options{display:flex;gap:10px;flex-wrap:wrap}.choice-btn{padding:10px 14px;border-radius:14px;border:1px solid #d4e1ff;background:#fff;font-weight:800;color:#36568f}.choice-btn.selected{background:#eaf2ff;border-color:#7ea4ff;color:#1647ae}.choice-btn.correct{background:#ebfff2;border-color:#6fcf97;color:#107a45}.choice-btn.wrong{background:#fff0f0;border-color:#f09191;color:#b13b3b}
+    .sort-list{display:grid;gap:12px}.sort-item{display:flex;align-items:center;justify-content:space-between;gap:12px}.sort-controls{display:flex;gap:8px}.icon-btn{width:42px;height:42px;border-radius:13px;background:#fff;border:1px solid #d7e4ff;font-size:1.05rem;font-weight:900;color:#214aa1}
+    .match-item select{width:100%;padding:12px 14px;border-radius:14px;border:1px solid #cfddfb;background:#fff;color:#16305f}
+    .feedback{margin-top:14px;padding:13px 14px;border-radius:16px;font-weight:800;display:none}.feedback.show{display:block}.feedback.ok{background:#eaf8f0;color:#137a46;border:1px solid #bee8ce}.feedback.bad{background:#fff1f1;color:#b23a3a;border:1px solid #f1c0c0}
+    .quiz-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.quiz-chip{padding:8px 12px;background:#edf4ff;border:1px solid #d8e5ff;border-radius:999px;font-size:.88rem;font-weight:900;color:#2150a9}
+    .quiz-options{display:grid;gap:10px;margin-top:12px}.quiz-option label{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:16px;border:1px solid #dce8ff;background:#fff;cursor:pointer}
+    .quiz-option input{margin-top:3px}
+    .score-card{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.score-mini{padding:14px;border-radius:18px;background:#fff;border:1px solid #dce8ff;text-align:center}
+    .input, textarea{width:100%;padding:13px 14px;border-radius:16px;border:1px solid #cfddfb;background:#fff;color:#16305f}textarea{min-height:120px;resize:vertical}
+    .range-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px}.range-wrap input[type=range]{flex:1 1 250px}
+    .range-value{min-width:64px;padding:10px 12px;border-radius:14px;background:#edf4ff;border:1px solid #d9e5ff;font-weight:900;text-align:center}
+    .bonus-box textarea{min-height:108px}
+    .footer{padding:28px 0 70px}.footer-card{background:linear-gradient(135deg,#10234f,#1f4db8 54%,#5dc2ff);color:#fff;border-radius:30px;padding:24px;box-shadow:var(--shadow)}
+    .footer-card h3{margin-top:0}.footer-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(20px);background:#123274;color:#fff;padding:13px 18px;border-radius:999px;box-shadow:0 14px 32px rgba(10,28,71,.22);opacity:0;pointer-events:none;transition:.25s;z-index:1200;font-weight:900}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1100}.confetti-piece{position:absolute;width:12px;height:18px;opacity:.95;border-radius:4px;animation:fall 3.6s linear forwards}@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+    .hidden{display:none !important}
+    @media (max-width: 1024px){
+      .hero-grid,.grid-two,.media-grid,.biodata{grid-template-columns:1fr}
+      .banner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .tech-grid,.dskp-grid,.info-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .site-header .container{align-items:flex-start;flex-direction:column}
+      .header-right{width:100%;justify-content:space-between}
+      .mini-progress{width:100%;min-width:0}
+      .hero-card{min-height:auto}
+      .banner-grid,.tech-grid,.flash-grid,.info-grid,.dskp-grid,.score-card,.kpi-grid{grid-template-columns:1fr}
+      .hero-actions,.mission-actions,.footer-actions{flex-direction:column}
+      .btn,.action-btn{width:100%}
+      .mission-status{width:100%;justify-content:flex-start}
+      .range-wrap{align-items:stretch}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="brand-badge">🏸</div>
+        <div>
+          <h1>Backhand Master Ultimate</h1>
+          <p>Multimedia Interaktif PdP • Pendidikan Jasmani Tahun 6</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="mini-progress">
+          <div class="mini-progress-top">
+            <span>⭐ Bintang Terkumpul: <strong id="starCountHeader">0/7</strong></span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="globalProgress"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      <nav class="nav container">
+        <a href="#utama">Utama</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#dskp">DSKP</a>
+        <a href="#video">Video</a>
+        <a href="#langkah">4 Langkah</a>
+        <a href="#misi">6 Misi</a>
+        <a href="#bonus">Bonus</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="utama">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">🎯 Modul Interaktif • Servis Backhand Badminton</div>
+          <h2>Kuasai <span>Servis Backhand</span> ke Ruang Sasaran</h2>
+          <p>Versi Ultimate ini mengekalkan semua <strong>foto sebenar</strong>, <strong>empat audio langkah</strong>, <strong>video slow motion</strong> dan <strong>GIF animasi</strong>, sambil menambah banner kartun 3D original, enam misi, satu bonus, sistem bintang dan kemajuan murid.</p>
+          <div class="hero-stats">
+            <div class="stat-pill">📘 Tahun 6</div>
+            <div class="stat-pill">⏱️ 55 minit</div>
+            <div class="stat-pill">🎧 4 audio</div>
+            <div class="stat-pill">🎮 6 misi + bonus</div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#misi">🚀 Mulakan Misi</a>
+            <a class="btn btn-secondary" href="#langkah">👀 Lihat 4 Langkah</a>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="summary-card">
+            <h3>Elemen multimedia yang dikekalkan</h3>
+            <div class="summary-list">
+              <div class="summary-item"><div class="summary-icon">🖼️</div><div><strong>Foto sebenar</strong><br><small>Empat gambar teknik servis backhand digunakan sebagai rujukan visual utama.</small></div></div>
+              <div class="summary-item"><div class="summary-icon">🎙️</div><div><strong>Empat audio</strong><br><small>Setiap langkah mempunyai audio penerangan tersendiri untuk membantu pemahaman murid.</small></div></div>
+              <div class="summary-item"><div class="summary-icon">🎥</div><div><strong>Video & GIF</strong><br><small>Demo slow motion dikekalkan sebagai bahan tunjuk cara dan animasi pergerakan.</small></div></div>
+            </div>
+          </div>
+          <div class="stars-card">
+            <div class="star-total">
+              <div>
+                <h3>Pencapaian murid</h3>
+                <p style="margin:6px 0 0;color:var(--muted)">Lengkapkan setiap misi untuk mendapatkan bintang dan membuka status Master.</p>
+              </div>
+              <div class="badge-3d" id="masterLabel">0/7 Selesai</div>
+            </div>
+            <div class="star-badges" id="starBadges"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title">
+            <small>Banner 3D Original</small>
+            <h3>Pembahagian halaman bergaya kartun premium</h3>
+            <p>Reka bentuk ini menggunakan banner original berinspirasikan tema <strong>Edu-Sport Adventure 3D</strong> — ceria, berwarna-warni dan sesuai untuk pembelajaran digital murid.</p>
+          </div>
+        </div>
+        <div class="banner-grid">
+          <div class="banner"><small>🧑‍🏫 Pengenalan</small><h4>BIODATA</h4><p>Kenali pembangun modul dan sasaran penggunaan.</p></div>
+          <div class="banner green"><small>📚 Kurikulum</small><h4>DSKP</h4><p>Lihat SK, SP, objektif dan kriteria kejayaan.</p></div>
+          <div class="banner cyan"><small>🎬 Demonstrasi</small><h4>VIDEO PEMBELAJARAN</h4><p>Tonton pergerakan sebenar dan GIF slow motion.</p></div>
+          <div class="banner yellow"><small>🏸 Teknik</small><h4>4 LANGKAH</h4><p>Dengar audio dan fahami teknik satu demi satu.</p></div>
+          <div class="banner purple"><small>🎮 Gamifikasi</small><h4>LATIHAN INTERAKTIF</h4><p>Enam misi untuk pengukuhan dan penerokaan.</p></div>
+          <div class="banner red"><small>⭐ Cabaran akhir</small><h4>BONUS REFLEKSI</h4><p>Semak pencapaian dan buat refleksi kendiri murid.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="biodata">
+      <div class="container biodata">
+        <div class="card creator-card">
+          <div class="avatar">👨🏻‍🏫</div>
+          <div class="section-title">
+            <small>Biodata</small>
+            <h3>Pembangun modul</h3>
+          </div>
+          <p><strong>Davis Victor</strong><br>PISMP Pendidikan Jasmani • PJSK 3<br>IPG Kampus Gaya</p>
+          <p style="color:var(--muted)">Bahan ini dibina sebagai multimedia interaktif PdP yang sesuai untuk murid, guru, guru pelatih IPG dan kegunaan inovasi pendidikan.</p>
+          <div class="pill-list">
+            <span class="soft-pill">🏫 Sekolah Rendah</span>
+            <span class="soft-pill">🧒 Murid Tahun 6</span>
+            <span class="soft-pill">💻 Responsif</span>
+            <span class="soft-pill">📱 Mesra telefon</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-title">
+            <small>Ringkasan</small>
+            <h3>Tetapan asas projek</h3>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi"><strong>Mata Pelajaran</strong><br>Pendidikan Jasmani</div>
+            <div class="kpi"><strong>Bidang</strong><br>Kemahiran asas permainan kategori jaring</div>
+            <div class="kpi"><strong>Tajuk</strong><br>Servis backhand badminton ke ruang sasaran</div>
+            <div class="kpi"><strong>Tujuan</strong><br>BBM digital, pembelajaran kendiri dan inovasi PdP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dskp">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title">
+            <small>DSKP</small>
+            <h3>Standard dan hasil pembelajaran</h3>
+            <p>Maklumat utama diringkaskan supaya murid dan guru jelas tentang fokus pembelajaran laman ini.</p>
+          </div>
+        </div>
+        <div class="dskp-grid">
+          <div class="dskp-box"><h4>Standard Kandungan 1.7</h4><p>Melakukan kemahiran asas permainan kategori jaring dengan lakuan yang betul.</p></div>
+          <div class="dskp-box"><h4>Standard Pembelajaran 1.7.1</h4><p>Melakukan servis ke ruang sasaran menggunakan anggota badan yang dibenarkan dan alatan.</p></div>
+          <div class="dskp-box"><h4>Objektif Pembelajaran</h4><p>Pada akhir pembelajaran, murid dapat melakukan servis backhand ke ruang sasaran dengan teknik yang betul serta mencapai sekurang-kurangnya <strong>4 daripada 5</strong> percubaan berjaya.</p></div>
+          <div class="dskp-box"><h4>Kriteria Kejayaan</h4><p>Murid dapat mengenal pasti sekurang-kurangnya tiga aspek teknik, menunjukkan kerjasama dan menyelesaikan aktiviti interaktif dengan baik.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="video">
+      <div class="container media-grid">
+        <div class="card">
+          <div class="section-title">
+            <small>Video Pembelajaran</small>
+            <h3>Video slow motion servis backhand</h3>
+            <p>Gunakan video ini semasa penerangan atau ulang kaji supaya murid dapat melihat pergerakan dengan lebih jelas.</p>
+          </div>
+          <div class="video-wrap">
+            <video controls playsinline preload="metadata">
+              <source src="assets/video/servis-backhand.mp4" type="video/mp4" />
+              Maaf, pelayar anda tidak menyokong video.
+            </video>
+          </div>
+          <div class="media-points">
+            <div class="media-point"><strong>Cadangan penggunaan:</strong> Guru boleh menghentikan video pada bahagian tertentu untuk menyoal murid tentang posisi badan, pegangan, ayunan dan sasaran.</div>
+          </div>
+        </div>
+        <div class="card gif-card">
+          <div class="section-title">
+            <small>Animasi</small>
+            <h3>GIF pergerakan servis</h3>
+            <p>GIF ini sesuai sebagai animasi ringkas, paparan pengukuhan atau perhatian awal sebelum aktiviti misi dimulakan.</p>
+          </div>
+          <img src="assets/img/servis-backhand-slowmo.gif" alt="Animasi slow motion servis backhand badminton" />
+          <div class="media-points">
+            <div class="media-point"><strong>Nota:</strong> Video memberi konteks penuh, manakala GIF sesuai untuk ulang tayang cepat dan fokus pergerakan.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="langkah">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title">
+            <small>Empat Langkah Teknik</small>
+            <h3>Foto sebenar + audio bagi setiap langkah</h3>
+            <p>Klik audio pada setiap kad untuk mendengar penerangan langkah. Bahan ini boleh digunakan secara stesen, demonstrasi atau pembelajaran kendiri.</p>
+          </div>
+        </div>
+        <div class="tech-grid">
+          <article class="tech-card">
+            <img class="tech-img" src="assets/img/step1.jpg" alt="Langkah 1 posisi badan servis backhand" />
+            <div class="tech-body">
+              <div class="tech-head"><div class="step-num">1</div><div><h4>Posisi Badan</h4><p>Berdiri stabil, sisi badan menghadap arah pukulan dan sedia untuk melakukan servis.</p></div></div>
+              <audio controls preload="metadata"><source src="assets/audio/lakuan1.m4a" type="audio/mp4" /></audio>
+            </div>
+          </article>
+          <article class="tech-card">
+            <img class="tech-img" src="assets/img/step2.jpg" alt="Langkah 2 pegangan raket servis backhand" />
+            <div class="tech-body">
+              <div class="tech-head"><div class="step-num">2</div><div><h4>Pegangan Raket</h4><p>Pegang raket menggunakan pegangan backhand yang selesa dan terkawal.</p></div></div>
+              <audio controls preload="metadata"><source src="assets/audio/lakuan2.m4a" type="audio/mp4" /></audio>
+            </div>
+          </article>
+          <article class="tech-card">
+            <img class="tech-img" src="assets/img/step3.jpg" alt="Langkah 3 ayunan pendek servis backhand" />
+            <div class="tech-body">
+              <div class="tech-head"><div class="step-num">3</div><div><h4>Ayunan Pendek</h4><p>Lakukan ayunan yang pendek, ringan dan terkawal untuk menghantar bulu tangkis dengan tepat.</p></div></div>
+              <audio controls preload="metadata"><source src="assets/audio/lakuan3.m4a" type="audio/mp4" /></audio>
+            </div>
+          </article>
+          <article class="tech-card">
+            <img class="tech-img" src="assets/img/step4.jpg" alt="Langkah 4 arah sasaran servis backhand" />
+            <div class="tech-body">
+              <div class="tech-head"><div class="step-num">4</div><div><h4>Arah Sasaran</h4><p>Fokus pada ruang sasaran supaya servis masuk ke kawasan yang dikehendaki.</p></div></div>
+              <audio controls preload="metadata"><source src="assets/audio/lakuan4.m4a" type="audio/mp4" /></audio>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="misi">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title">
+            <small>Latihan Interaktif</small>
+            <h3>Enam misi utama</h3>
+            <p>Setiap misi yang berjaya diselesaikan akan memberi <strong>1 bintang</strong>. Lengkapkan semuanya untuk mencapai status <strong>Backhand Master</strong>.</p>
+          </div>
+        </div>
+        <div class="mission-list">
+
+          <section class="mission" id="mission1">
+            <div class="mission-head">
+              <div class="mission-title"><div class="mission-number">1</div><div><h4>Misi Kenali 4 Langkah</h4><p>Klik semua kad langkah untuk membuka penerangan ringkas. Selepas semua dibuka, tandakan misi selesai.</p></div></div>
+              <div class="mission-status"><span class="status-badge" id="badge-m1">Belum selesai</span></div>
+            </div>
+            <div class="mission-body">
+              <div class="flash-grid" id="flashGrid">
+                <div class="flash-card" data-flash="0"><h5>Posisi Badan</h5><p>Badan berada dalam kedudukan stabil sebelum melakukan servis.</p></div>
+                <div class="flash-card" data-flash="1"><h5>Pegangan Raket</h5><p>Pegangan backhand membantu kawalan dan ketepatan pukulan.</p></div>
+                <div class="flash-card" data-flash="2"><h5>Ayunan Pendek</h5><p>Ayunan perlu ringkas dan tidak berlebihan.</p></div>
+                <div class="flash-card" data-flash="3"><h5>Arah Sasaran</h5><p>Mata dan pukulan difokuskan ke ruang sasaran.</p></div>
+              </div>
+              <div class="feedback" id="feedback-m1"></div>
+              <div class="mission-actions">
+                <button class="action-btn success" onclick="completeFlashMission()">✅ Tandakan selesai</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="mission" id="mission2">
+            <div class="mission-head">
+              <div class="mission-title"><div class="mission-number">2</div><div><h4>Misi Betul atau Salah</h4><p>Pilih jawapan yang tepat bagi setiap pernyataan berkaitan teknik servis backhand.</p></div></div>
+              <div class="mission-status"><span class="status-badge" id="badge-m2">Belum selesai</span></div>
+            </div>
+            <div class="mission-body">
+              <div class="tf-grid" id="tfGrid"></div>
+              <div class="feedback" id="feedback-m2"></div>
+              <div class="mission-actions"><button class="action-btn" onclick="checkTrueFalse()">Semak jawapan</button></div>
+            </div>
+          </section>
+
+          <section class="mission" id="mission3">
+            <div class="mission-head">
+              <div class="mission-title"><div class="mission-number">3</div><div><h4>Misi Susun Urutan</h4><p>Susun empat langkah teknik mengikut urutan yang betul menggunakan butang naik dan turun.</p></div></div>
+              <div class="mission-status"><span class="status-badge" id="badge-m3">Belum selesai</span></div>
+            </div>
+            <div class="mission-body">
+              <div class="sort-list" id="sortList"></div>
+              <div class="feedback" id="feedback-m3"></div>
+              <div class="mission-actions"><button class="action-btn" onclick="checkSortMission()">Semak urutan</button></div>
+            </div>
+          </section>
+
+          <section class="mission" id="mission4">
+            <div class="mission-head">
+              <div class="mission-title"><div class="mission-number">4</div><div><h4>Misi Padankan Teknik</h4><p>Padankan nama langkah dengan fokus penerangannya.</p></div></div>
+              <div class="mission-status"><span class="status-badge" id="badge-m4">Belum selesai</span></div>
+            </div>
+            <div class="mission-body">
+              <div class="match-grid" id="matchGrid"></div>
+              <div class="feedback" id="feedback-m4"></div>
+              <div class="mission-actions"><button class="action-btn" onclick="checkMatchMission()">Semak padanan</button></div>
+            </div>
+          </section>
+
+          <section class="mission" id="mission5">
+            <div class="mission-head">
+              <div class="mission-title"><div class="mission-number">5</div><div><h4>Misi Kuiz 10 Soalan</h4><p>Jawab sepuluh soalan aneka pilihan tentang servis backhand badminton.</p></div></div>
+              <div class="mission-status"><span class="status-badge" id="badge-m5">Belum selesai</span></div>
+            </div>
+            <div class="mission-body">
+              <div class="quiz-meta">
+                <div class="quiz-chip">🎯 Sasaran lulus: 7/10</div>
+                <div class="quiz-chip">🧠 10 soalan</div>
+                <div class="quiz-chip">⭐ Dapat bintang apabila lulus</div>
+              </div>
+              <div id="quizContainer"></div>
+              <div class="feedback" id="feedback-m5"></div>
+              <div class="mission-actions"><button class="action-btn" onclick="checkQuizMission()">Semak kuiz</button></div>
+            </div>
+          </section>
+
+          <section class="mission" id="mission6">
+            <div class="mission-head">
+              <div class="mission-title"><div class="mission-number">6</div><div><h4>Misi Cabaran Sasaran</h4><p>Catat jumlah servis berjaya dan semak tahap pencapaian kendiri.</p></div></div>
+              <div class="mission-status"><span class="status-badge" id="badge-m6">Belum selesai</span></div>
+            </div>
+            <div class="mission-body">
+              <div class="target-box">
+                <strong>Berapa daripada 5 percubaan servis kamu berjaya?</strong>
+                <div class="range-wrap">
+                  <input type="range" min="0" max="5" step="1" value="0" id="targetRange" oninput="document.getElementById('targetValue').textContent=this.value+'/5'" />
+                  <div class="range-value" id="targetValue">0/5</div>
+                </div>
+                <div class="score-card">
+                  <div class="score-mini"><strong>0-1</strong><br>Perlu lebih latihan</div>
+                  <div class="score-mini"><strong>2-3</strong><br>Semakin menguasai</div>
+                  <div class="score-mini"><strong>4-5</strong><br>Capai sasaran!</div>
+                </div>
+              </div>
+              <div class="feedback" id="feedback-m6"></div>
+              <div class="mission-actions"><button class="action-btn" onclick="checkTargetMission()">Hantar pencapaian</button></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bonus">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title">
+            <small>Bonus</small>
+            <h3>Misi bonus: refleksi murid</h3>
+            <p>Selepas menyelesaikan aktiviti, murid menilai penguasaan diri. Teks refleksi boleh dimuat turun sebagai fail untuk disimpan atau dihantar kepada guru.</p>
+          </div>
+        </div>
+        <div class="card bonus-box">
+          <label><strong>1. Apakah satu teknik yang sudah kamu kuasai?</strong></label>
+          <textarea id="ref1" placeholder="Contoh: Saya sudah dapat melakukan ayunan pendek dengan lebih terkawal."></textarea>
+          <label style="display:block;margin-top:14px"><strong>2. Bahagian manakah yang masih sukar?</strong></label>
+          <textarea id="ref2" placeholder="Contoh: Saya masih sukar mengarahkan bulu tangkis tepat ke sasaran."></textarea>
+          <label style="display:block;margin-top:14px"><strong>3. Apakah yang akan kamu perbaiki pada percubaan seterusnya?</strong></label>
+          <textarea id="ref3" placeholder="Contoh: Saya akan fokus pada pegangan dan arah sasaran."></textarea>
+          <div class="feedback" id="feedback-m7"></div>
+          <div class="mission-actions">
+            <button class="action-btn" onclick="completeBonusMission()">⭐ Simpan bonus</button>
+            <button class="action-btn alt" onclick="downloadReflection()">⬇️ Muat turun refleksi</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer-card">
+          <h3>Penutup</h3>
+          <p>Backhand Master Ultimate dibina untuk pengalaman pembelajaran yang lebih premium, interaktif dan mesra murid. Ia sesuai di-host melalui GitHub Pages dan di-embed dalam Google Sites.</p>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="#utama">⬆️ Kembali ke atas</a>
+            <a class="btn btn-secondary" href="#video">🎥 Ulang tonton video</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <div class="confetti hidden" id="confetti"></div>
+
+  <script>
+    const missionKeys=['m1','m2','m3','m4','m5','m6','m7'];
+    const stateKey='backhandMasterUltimateState';
+    const saved = JSON.parse(localStorage.getItem(stateKey) || '{}');
+    const state = {completed: saved.completed || {}};
+
+    const trueFalseData = [
+      {statement:'Servis backhand memerlukan tumpuan pada arah sasaran.',answer:true},
+      {statement:'Ayunan backhand perlu terlalu besar supaya servis lebih baik.',answer:false},
+      {statement:'Pegangan raket yang betul membantu kawalan pukulan.',answer:true},
+      {statement:'Posisi badan tidak penting semasa melakukan servis.',answer:false},
+      {statement:'Empat langkah utama termasuk posisi badan, pegangan, ayunan dan arah sasaran.',answer:true}
+    ];
+
+    const matchData = [
+      {step:'Posisi Badan',answer:'Berdiri stabil dan sedia sebelum servis'},
+      {step:'Pegangan Raket',answer:'Menggunakan pegangan backhand yang terkawal'},
+      {step:'Ayunan Pendek',answer:'Hayunan ringkas dan tidak berlebihan'},
+      {step:'Arah Sasaran',answer:'Fokus menghantar bulu tangkis ke ruang dituju'}
+    ];
+
+    const matchOptions = [
+      'Berdiri stabil dan sedia sebelum servis',
+      'Menggunakan pegangan backhand yang terkawal',
+      'Hayunan ringkas dan tidak berlebihan',
+      'Fokus menghantar bulu tangkis ke ruang dituju'
+    ];
+
+    const quizData = [
+      {q:'Apakah tujuan utama servis backhand ke ruang sasaran?',options:['Untuk memulakan permainan dengan arah yang terkawal','Untuk membuat pukulan deras sepanjang masa','Untuk menjaringkan mata secara automatik','Untuk melambungkan bulu tangkis setinggi mungkin'],a:0},
+      {q:'Langkah pertama dalam teknik yang dipelajari ialah…',options:['Ayunan pendek','Posisi badan','Arah sasaran','Lompatan kaki'],a:1},
+      {q:'Pegangan yang digunakan dalam modul ini ialah…',options:['Pegangan frying pan','Pegangan forehand','Pegangan backhand','Pegangan dua tangan'],a:2},
+      {q:'Semasa melakukan ayunan pendek, murid perlu…',options:['Menghayun terlalu kuat','Mengekalkan ayunan ringkas dan terkawal','Menutup mata','Menggerakkan kedua-dua tangan serentak'],a:1},
+      {q:'Mengapa arah sasaran penting?',options:['Supaya servis pergi ke tempat yang dikehendaki','Supaya murid nampak lebih hebat','Supaya raket lebih berat','Supaya bulu tangkis jatuh di belakang badan'],a:0},
+      {q:'Antara berikut, yang manakah menunjukkan kawalan yang baik?',options:['Pegangan longgar tanpa fokus','Berdiri tidak seimbang','Mata tertumpu pada sasaran','Memukul sambil berpusing-pusing'],a:2},
+      {q:'Video dan GIF dalam modul ini berfungsi untuk…',options:['Hiasan sahaja','Menunjukkan pergerakan secara visual','Menggantikan semua aktiviti','Membuat laman lebih panjang'],a:1},
+      {q:'Jika servis sering tersasar, perkara yang perlu diperbaiki ialah…',options:['Arah sasaran dan kawalan ayunan','Warna kasut','Bilangan penonton','Ketinggian jaring semata-mata'],a:0},
+      {q:'Sasaran kejayaan amali dalam modul ini ialah sekurang-kurangnya…',options:['1 daripada 5','2 daripada 5','4 daripada 5','5 daripada 10'],a:2},
+      {q:'Selepas membuat latihan, murid digalakkan…',options:['Terus berhenti tanpa menilai diri','Membuat refleksi tentang penguasaan mereka','Mengabaikan kesalahan','Menukar topik pelajaran'],a:1}
+    ];
+
+    let sortOrder = ['Ayunan Pendek','Posisi Badan','Arah Sasaran','Pegangan Raket'];
+
+    function persist(){localStorage.setItem(stateKey,JSON.stringify(state));}
+
+    function renderStars(){
+      const wrap=document.getElementById('starBadges');
+      wrap.innerHTML='';
+      let total=0;
+      missionKeys.forEach((k,i)=>{
+        const active=!!state.completed[k]; if(active) total++;
+        const el=document.createElement('div');
+        el.className='star'+(active?' active':'');
+        el.title='Bintang '+(i+1);
+        el.textContent= active ? '⭐' : '☆';
+        wrap.appendChild(el);
+      });
+      document.getElementById('starCountHeader').textContent=`${total}/7`;
+      document.getElementById('masterLabel').textContent=`${total}/7 Selesai`;
+      const percent=Math.round((total/7)*100);
+      document.getElementById('globalProgress').style.width=percent+'%';
+      document.getElementById('progressPercent').textContent=percent+'%';
+      if(total===7){showToast('Tahniah! Semua misi selesai. Anda kini Backhand Master!');launchConfetti();}
+    }
+
+    function setMissionComplete(key,done=true){
+      state.completed[key]=done;
+      persist();
+      renderMissionBadges();
+      renderStars();
+    }
+
+    function renderMissionBadges(){
+      missionKeys.forEach((k)=>{
+        const badge=document.getElementById('badge-'+k);
+        if(!badge) return;
+        const done=!!state.completed[k];
+        badge.textContent=done?'Selesai ✅':'Belum selesai';
+        badge.className='status-badge'+(done?' done':'');
+      });
+    }
+
+    function showFeedback(id,msg,ok){
+      const el=document.getElementById(id);
+      el.textContent=msg;
+      el.className='feedback show '+(ok?'ok':'bad');
+    }
+
+    function showToast(msg){
+      const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+      clearTimeout(showToast.timer); showToast.timer=setTimeout(()=>t.classList.remove('show'),2500);
+    }
+
+    function launchConfetti(){
+      const c=document.getElementById('confetti'); c.innerHTML=''; c.classList.remove('hidden');
+      const colors=['#ffd54f','#7b61ff','#6bd39d','#4da2ff','#ff8e6f','#ffffff'];
+      for(let i=0;i<42;i++){
+        const p=document.createElement('div'); p.className='confetti-piece';
+        p.style.left=Math.random()*100+'vw'; p.style.background=colors[Math.floor(Math.random()*colors.length)];
+        p.style.animationDelay=(Math.random()*0.8)+'s'; p.style.transform=`translateY(-10vh) rotate(${Math.random()*360}deg)`;
+        c.appendChild(p);
+      }
+      setTimeout(()=>c.classList.add('hidden'),3800);
+    }
+
+    function completeFlashMission(){
+      const openCount=document.querySelectorAll('.flash-card.open').length;
+      if(openCount===4){setMissionComplete('m1');showFeedback('feedback-m1','Hebat! Kamu sudah membuka semua kad dan menamatkan Misi 1.',true);showToast('Bintang diperoleh untuk Misi 1!');}
+      else{showFeedback('feedback-m1','Buka semua 4 kad dahulu sebelum menandakan misi ini selesai.',false);}
+    }
+
+    function buildTrueFalse(){
+      const grid=document.getElementById('tfGrid');
+      trueFalseData.forEach((item,idx)=>{
+        const row=document.createElement('div'); row.className='tf-item';
+        row.innerHTML=`<strong>${idx+1}. ${item.statement}</strong><div class="tf-options"><button type="button" class="choice-btn" data-tf="${idx}" data-val="true">Betul</button><button type="button" class="choice-btn" data-tf="${idx}" data-val="false">Salah</button></div>`;
+        grid.appendChild(row);
+      });
+      grid.addEventListener('click',(e)=>{
+        const btn=e.target.closest('.choice-btn'); if(!btn) return;
+        const idx=btn.dataset.tf;
+        grid.querySelectorAll(`[data-tf="${idx}"]`).forEach(b=>b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    }
+
+    function checkTrueFalse(){
+      let score=0, answered=0;
+      trueFalseData.forEach((item,idx)=>{
+        const sel=document.querySelector(`#tfGrid .choice-btn.selected[data-tf="${idx}"]`);
+        document.querySelectorAll(`#tfGrid [data-tf="${idx}"]`).forEach(b=>b.classList.remove('correct','wrong'));
+        if(sel){answered++; const val=sel.dataset.val==='true'; if(val===item.answer){score++; sel.classList.add('correct')} else {sel.classList.add('wrong')}}
+      });
+      if(answered<trueFalseData.length){showFeedback('feedback-m2','Sila jawab semua pernyataan dahulu.',false);return;}
+      if(score>=4){setMissionComplete('m2');showFeedback('feedback-m2',`Bagus! Kamu mendapat ${score}/5. Misi 2 selesai.`,true);showToast('Bintang diperoleh untuk Misi 2!');}
+      else{showFeedback('feedback-m2',`Kamu mendapat ${score}/5. Cuba lagi sehingga sekurang-kurangnya 4 jawapan betul.`,false);}
+    }
+
+    function buildSort(){renderSort();}
+    function renderSort(){
+      const wrap=document.getElementById('sortList');wrap.innerHTML='';
+      sortOrder.forEach((label,idx)=>{
+        const row=document.createElement('div'); row.className='sort-item';
+        row.innerHTML=`<div><strong>${idx+1}. ${label}</strong></div><div class="sort-controls"><button class="icon-btn" type="button" onclick="moveSort(${idx},-1)">↑</button><button class="icon-btn" type="button" onclick="moveSort(${idx},1)">↓</button></div>`;
+        wrap.appendChild(row);
+      })
+    }
+    function moveSort(index,dir){ const ni=index+dir; if(ni<0||ni>=sortOrder.length) return; [sortOrder[index],sortOrder[ni]]=[sortOrder[ni],sortOrder[index]]; renderSort(); }
+    function checkSortMission(){
+      const correct=['Posisi Badan','Pegangan Raket','Ayunan Pendek','Arah Sasaran'];
+      const ok=sortOrder.every((v,i)=>v===correct[i]);
+      if(ok){setMissionComplete('m3');showFeedback('feedback-m3','Tepat! Urutan langkah adalah betul. Misi 3 selesai.',true);showToast('Bintang diperoleh untuk Misi 3!');}
+      else{showFeedback('feedback-m3','Urutan masih belum tepat. Cuba susun semula empat langkah tersebut.',false);}
+    }
+
+    function buildMatch(){
+      const grid=document.getElementById('matchGrid');
+      matchData.forEach((item,idx)=>{
+        const row=document.createElement('div'); row.className='match-item';
+        row.innerHTML=`<strong>${idx+1}. ${item.step}</strong><select id="match-${idx}"><option value="">Pilih penerangan</option>${matchOptions.map(o=>`<option value="${o}">${o}</option>`).join('')}</select>`;
+        grid.appendChild(row);
+      });
+    }
+    function checkMatchMission(){
+      let correct=0; matchData.forEach((item,idx)=>{ const v=document.getElementById('match-'+idx).value; if(v===item.answer) correct++; });
+      if(correct===matchData.length){setMissionComplete('m4');showFeedback('feedback-m4','Cemerlang! Semua padanan adalah betul. Misi 4 selesai.',true);showToast('Bintang diperoleh untuk Misi 4!');}
+      else{showFeedback('feedback-m4',`Kamu memadankan ${correct}/${matchData.length} dengan betul. Cuba lagi.`,false);}
+    }
+
+    function buildQuiz(){
+      const wrap=document.getElementById('quizContainer');
+      quizData.forEach((item,idx)=>{
+        const row=document.createElement('div'); row.className='quiz-item';
+        row.innerHTML=`<strong>${idx+1}. ${item.q}</strong><div class="quiz-options">${item.options.map((opt,oi)=>`<div class="quiz-option"><label><input type="radio" name="quiz-${idx}" value="${oi}" /> <span>${String.fromCharCode(65+oi)}. ${opt}</span></label></div>`).join('')}</div>`;
+        wrap.appendChild(row);
+      })
+    }
+    function checkQuizMission(){
+      let score=0;
+      for(let i=0;i<quizData.length;i++){
+        const checked=document.querySelector(`input[name="quiz-${i}"]:checked`);
+        if(!checked) {showFeedback('feedback-m5','Sila jawab semua 10 soalan dahulu.',false);return;}
+        if(Number(checked.value)===quizData[i].a) score++;
+      }
+      if(score>=7){setMissionComplete('m5');showFeedback('feedback-m5',`Tahniah! Kamu mendapat ${score}/10. Misi 5 selesai.`,true);showToast('Bintang diperoleh untuk Misi 5!');}
+      else{showFeedback('feedback-m5',`Kamu mendapat ${score}/10. Cuba lagi sehingga mencapai sekurang-kurangnya 7/10.`,false);}
+    }
+
+    function checkTargetMission(){
+      const val=Number(document.getElementById('targetRange').value);
+      let msg='';
+      if(val>=4){ msg=`Syabas! Kamu berjaya ${val}/5 percubaan. Kamu mencapai sasaran misi ini.`; setMissionComplete('m6'); showToast('Bintang diperoleh untuk Misi 6!'); showFeedback('feedback-m6',msg,true); }
+      else { msg=`Kamu berjaya ${val}/5 percubaan. Teruskan latihan sehingga mencapai sekurang-kurangnya 4/5.`; showFeedback('feedback-m6',msg,false); }
+    }
+
+    function completeBonusMission(){
+      const a=document.getElementById('ref1').value.trim();
+      const b=document.getElementById('ref2').value.trim();
+      const c=document.getElementById('ref3').value.trim();
+      if(!a||!b||!c){showFeedback('feedback-m7','Lengkapkan ketiga-tiga ruangan refleksi dahulu.',false);return;}
+      setMissionComplete('m7');
+      localStorage.setItem('backhandMasterReflection', JSON.stringify({a,b,c,date:new Date().toISOString()}));
+      showFeedback('feedback-m7','Refleksi bonus berjaya disimpan pada pelayar ini.',true); showToast('Bintang bonus diperoleh!');
+    }
+
+    function downloadReflection(){
+      const a=document.getElementById('ref1').value.trim();
+      const b=document.getElementById('ref2').value.trim();
+      const c=document.getElementById('ref3').value.trim();
+      const text=`REFLEKSI MURID – BACKHAND MASTER\n\n1. Teknik yang sudah dikuasai:\n${a||'-'}\n\n2. Bahagian yang masih sukar:\n${b||'-'}\n\n3. Penambahbaikan seterusnya:\n${c||'-'}\n`;
+      const blob=new Blob([text],{type:'text/plain'}); const url=URL.createObjectURL(blob);
+      const link=document.createElement('a'); link.href=url; link.download='refleksi-backhand-master.txt'; link.click(); URL.revokeObjectURL(url);
+    }
+
+    function initFlashCards(){
+      document.querySelectorAll('.flash-card').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('open')))
+    }
+
+    function restoreReflection(){
+      try{const savedRef=JSON.parse(localStorage.getItem('backhandMasterReflection')||'null'); if(savedRef){document.getElementById('ref1').value=savedRef.a||'';document.getElementById('ref2').value=savedRef.b||'';document.getElementById('ref3').value=savedRef.c||'';}}
+      catch(e){}
+    }
+
+    buildTrueFalse(); buildSort(); buildMatch(); buildQuiz(); initFlashCards(); restoreReflection(); renderMissionBadges(); renderStars();
+  </script>
+</body>
+</html>
